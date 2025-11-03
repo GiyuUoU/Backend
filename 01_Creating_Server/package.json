@@ -1,0 +1,17 @@
+{
+  "name": "01_creating_server",
+  "version": "1.0.0",
+  "description": "Server creation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Server"
+  ],
+  "author": "Rudr",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

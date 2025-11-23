@@ -27,3 +27,35 @@ console.log("Greater than 5");
 for (let i = 0; i < 3; i++) {
 console.log(i);
 }
+
+/*
+2. ARRAYS IN JAVASCRIPT
+--------------------------------------------*/
+
+let arr = [1, 2, 3];
+
+// Add/Remove
+arr.push(4); // adds element at end
+arr.pop(); // removes last element // removes last element
+arr.unshift(0); // adds element at start // adds element at start
+arr.shift(); // removes first element // removes first element
+
+// Searching
+arr.indexOf(2); // finds index of element(2); // finds index of element(2);
+arr.includes(3); // checks existence of element(3); // checks existence of element(3);
+
+// Transform
+arr.map(x => x * 2); // applies function to each item(x => x * 2); // applies function to each item(x => x * 2);
+arr.filter(x => x > 1); // filters elements by condition(x => x > 1); // filters elements by condition(x => x > 1);
+arr.reduce((total, x) => total + x, 0); // accumulates values into one((total, x) => total + x, 0); // accumulates values into one((total, x) => total + x, 0);
+
+// Utility
+arr.slice(1, 3); // extracts portion without modifying original(1, 3); // extracts portion without modifying original(1, 3);
+arr.splice(1, 1); // modifies array by removing/adding elements(1, 1); // modifies array by removing/adding elements(1, 1);
+arr.join("-"); // joins array into string("-"); // joins array into string("-");
+
+// Spread & Rest
+let newArr = [...arr]; // spread operator copies array [...arr]; // spread operator copies array [...arr];
+function sumAll(...nums) { return nums; }
+
+

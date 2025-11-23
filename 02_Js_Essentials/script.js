@@ -111,3 +111,16 @@ const subtract = (a, b) => a - b;
 function greet(name = "User") {
 console.log("Hi", name);
 }
+
+/*
+5. ASYNCHRONOUS JAVASCRIPT
+--------------------------------------------*/
+// Synchronous -> Line by line code chale isey kahte hain synchronous code
+// Asynchronous -> Jo bhi code async nature ka ho , usey side stack mein bhej do and aglen code ko chalao jo bhi sync nature ka ho, jab bhi sara sync code chal jaye, tab check karo ki async code complete hua ya nahi and agar wo complete hua ho to usey main stack mein lao and chala do. isey kehte hain asynchronous code
+
+async function fetchData() {
+    var blob = await fetch('https://randomuser.me/api/')
+    var result = await blob.json();
+    console.log(result);
+}
+fetchData();

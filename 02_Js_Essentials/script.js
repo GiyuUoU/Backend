@@ -93,3 +93,21 @@ let obj = {
   }
 };
 obj.greet(); // calls the greet method
+
+/*
+4. FUNCTIONS & RETURN
+--------------------------------------------*/
+
+function add(a, b) {
+return a + b;
+}
+
+const multiply = function(a, b) {
+return a * b;
+};
+
+const subtract = (a, b) => a - b;
+
+function greet(name = "User") {
+console.log("Hi", name);
+}

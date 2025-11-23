@@ -58,4 +58,38 @@ arr.join("-"); // joins array into string("-"); // joins array into string("-");
 let newArr = [...arr]; // spread operator copies array [...arr]; // spread operator copies array [...arr];
 function sumAll(...nums) { return nums; }
 
+/*
+3. OBJECTS IN JAVASCRIPT
+--------------------------------------------*/
 
+let user = {
+name: "Maddy",
+age: 18,
+isAdmin: false
+};
+
+// Accessing
+user.name;
+user["age"];
+
+// Adding / Removing
+user.city = "Lucknow";
+delete user.isAdmin;
+
+// Looping
+for (let key in user) {
+console.log(key, user[key]);
+}
+
+// Looping with forEach (using Object.keys)
+Object.keys(user).forEach(key => {
+console.log(key, user[key]); // iterates through object properties
+});
+
+// Methods
+let obj = {
+  greet() {
+   console.log("Hello");
+  }
+};
+obj.greet(); // calls the greet method

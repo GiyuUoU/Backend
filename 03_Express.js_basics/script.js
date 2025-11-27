@@ -29,10 +29,13 @@ const app = express();                // Create app instance
 
 const PORT = 3000;
 
+/* Example of a basic route
+
 app.get('/', (req, res) => {
     res.send('Hello, Nonchalant Sigma  boi !!!');
 });
 
+*/
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
@@ -60,6 +63,30 @@ app.put('/update', (req, res) => {
 app.delete('/remove', (req, res) => {
   res.send('Deleted successfully'); // DELETE request
 });
+
+
+/*
+4. MIDDLEWARE
+---------------------------------------------------
+Middleware runs BETWEEN request and response.
+Types:
+• Application-level middleware
+• Built-in middleware
+• Router-level middleware
+• Error-handling middleware
+
+Usage: logging, authentication, JSON parsing, etc.
+*/
+
+// Built-in JSON middleware
+app.use(express.json());
+
+// Custom logging middleware
+app.use((req, res, next) => {
+  console.log(`Request → ${req.method} ${req.url}`);
+  next(); // Moves to next middleware/route
+});
+
 
 
 

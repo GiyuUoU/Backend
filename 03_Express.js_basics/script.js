@@ -112,4 +112,20 @@ app.post('/login', (req, res) => {
 });
 
 
+/*
+6. ERROR HANDLING
+---------------------------------------------------
+Error-handling middleware MUST have 4 parameters:
+(err, req, res, next)
+*/
 
+app.use((err, req, res, next) => {
+  console.error('Error:', err.stack);
+  res.status(500).send('Internal Server Error');
+});
+
+/*
+Usage Example:
+throw new Error('Something went wrong');
+→ Express sends it to error handler above
+*/

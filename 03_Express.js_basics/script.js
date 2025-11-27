@@ -88,5 +88,28 @@ app.use((req, res, next) => {
 });
 
 
+/*
+5. REQUEST & RESPONSE HANDLING
+---------------------------------------------------
+Express gives special objects:
+req → stores request info
+res → lets you send responses
+*/
+
+app.get('/user/:id', (req, res) => {
+  res.send(`User ID: ${req.params.id}`);   // URL params
+});
+
+app.get('/search', (req, res) => {
+  res.send(`Query: ${req.query.q}`);       // Query params
+});
+
+app.post('/login', (req, res) => {
+  res.json({
+    username: req.body.username,
+    status: 'Logged in'
+  });                                       // JSON body
+});
+
 
 

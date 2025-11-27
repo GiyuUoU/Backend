@@ -36,3 +36,30 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
+/*
+3. ROUTING IN EXPRESS
+---------------------------------------------------
+Routing decides how your server responds to requests.
+Common HTTP methods: GET, POST, PUT, DELETE
+*/
+
+app.get('/', (req, res) => {
+  res.send('Home Page');  // GET request
+});
+
+app.post('/submit', (req, res) => {
+  res.send('Form Submitted'); // POST request
+});
+
+app.put('/update', (req, res) => {
+  res.send('Updated successfully'); // PUT request
+});
+
+app.delete('/remove', (req, res) => {
+  res.send('Deleted successfully'); // DELETE request
+});
+
+
+
